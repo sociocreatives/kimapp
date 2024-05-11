@@ -34,3 +34,25 @@ class ExpertTips(models.Model):
     
     def __str__(self):
         return self.title
+
+class Category(models.Model):
+    image = models.ImageField(null=True, blank=True, upload_to='images/category/')
+    name= models.CharField(max_length=50)
+    description = models.TextField(null=True)
+
+    class Meta:
+        verbose_name_plural = "Main Categories"
+    
+    def __str__(self):
+        return self.name
+
+class MajorCategory(models.Model):
+    image = models.ImageField(null=True, blank=True, upload_to='images/category/subcats')
+    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.CASCADE)
+    name= models.CharField(max_length=50)
+
+    class Meta:
+        verbose_name_plural = "Major Sub Categories"
+    
+    def __str__(self):
+        return self.name

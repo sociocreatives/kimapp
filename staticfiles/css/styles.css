@@ -590,6 +590,13 @@ input{
 .navbar-content .menu{
   display: flex;
 }
+
+.scrollviews{
+    display: flex;
+    gap: 1rem;
+    background-color: #d0e6d3;
+}
+
 .hero-section{
   max-width: 90%;
   margin: 0 auto;

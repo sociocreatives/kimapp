@@ -27,5 +27,30 @@
                 </div>
             </div>
         </section>
+
+        {% comment %} Categories Section {% endcomment %}
+        <section class='catgeories'>
+            <div class="category-content">
+              <div class="category-left">
+                  <h1>Get Services</h1>
+                  <Link href="/categories"><p>See All</p></Link>
+              </div>
+              <div class="category-below">
+                  <p>Looking for Open Job Opportunities? <span><Link href="/jobs">View Jobs </Link></span></p>
+              </div>
+            </div>
+          <div class="category-typesone">
+            <section class="scrollviews">
+                {% for obj in categories %}
+                <div class="ayiako" data-aos="fade-up"><Link href="/categories/automobile"><div class='cats' data-aos="zoom-in" style="background-image: url({{ obj.image.url }}); background-size: cover; background-position: center">
+                    <p class='cat-text'>{{ obj.name }} <span>50+</span></p></div></Link>
+                </div>
+                {% endfor %}
+            </section>
+          </div>
+
+          
+        </section>
+        
     </section>
 {% endblock %}
