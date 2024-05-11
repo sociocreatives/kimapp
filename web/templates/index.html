@@ -1,12 +1,45 @@
-<!-- my_template.html -->
+
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-<head>
+  <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Template</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-</body>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+     <div class="navbar">
+            <div class="navbar-content">
+                <div class="navbar-left">
+                   <Link href="/">
+                        <Image src="{% static 'images/mrkim-logo.svg' %}" width="160px" alt="mr. kim logo" priority class="imagelogo"/>
+                    </Link>
+                   
+                    
+                   
+                    <div class="plus">
+                        <Link href="/categories">Get Service <Image src="{% static 'images/plus2.svg' %}" width="10px" alt="Plus" priority class="imageplus" /></Link>
+                       </div>
+                    
+                </div>
+                <div class="navbar-right">
+                       <div class="onsign">
+                                <Link href="/">Home</Link>
+                                <Link href="/jobs">Jobs</Link>
+                                <Link href="/categories">Categories</Link>
+                                <Link href="/talent">Talent</Link>
+                                 <Link href="/premium">Premium</Link>        
+                                <SignInButton/>
+                            </div>
+                </div>
+               <div class="mobilemenu">
+                    <NavbarMobile />
+                </div>
+            </div>
+        </div>
+  </body>
 </html>
