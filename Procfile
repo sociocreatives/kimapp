@@ -1,0 +1,1 @@
+web gunicorn mrkim.wsgi:application --log-file - 
