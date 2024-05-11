@@ -1634,7 +1634,7 @@ input{
 }
 
 .howimage{
-  background-image: url("../public/assets/images/lawnmower.jpg");
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3296,7 +3296,7 @@ label {
 .sidetwo{
   background-color: green;
   height: 100vh;
-  background-image: url('../public/assets/images/gardening.jpg');
+
   background-size: cover;
   background-position: center;
   border-right: 4px solid green;
