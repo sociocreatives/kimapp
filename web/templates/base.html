@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+     <div class="navbar">
+            <div class="navbar-content">
+                <div class="navbar-left">
+                   <Link href="/">
+                        <Image src="{% static 'images/mrkim-logo.svg' %}" width="160px" alt="mr. kim logo" priority class="imagelogo"/>
+                    </Link>
+                   
+                    
+                   
+                    <div class="plus">
+                        <Link href="/categories">Get Service <Image src="{% static 'images/plus2.svg' %}" width="10px" alt="Plus" priority class="imageplus" /></Link>
+                       </div>
+                    
+                </div>
+                <div class="navbar-right">
+                       <div class="onsign">
+                                <Link href="/">Home</Link>
+                                <Link href="/jobs">Jobs</Link>
+                                <Link href="/categories">Categories</Link>
+                                <Link href="/talent">Talent</Link>
+                                 <Link href="/premium">Premium</Link>        
+                                <SignInButton/>
+                            </div>
+                </div>
+               <div class="mobilemenu">
+                    <div>
+        <div class="user-icon" >
+        <Image src="/assets/images/menu.svg" width="30px" alt="mobile menu" class="menusa"/>
+        </div>
+
+        <div class="navbar-mobile">
+              <div class="unloged">
+                <div class="welcome">
+                    <h5>Welcome</h5>
+                    </div>
+                        <Link href="/" data-aos="fade-in" >Home</Link>
+                        <Link href="/jobs" data-aos="fade-in" >Jobs</Link>
+                        <Link href="/categories" data-aos="fade-in" >Categories</Link>
+                        <Link href="/profile" data-aos="fade-in" >Profile</Link>
+                        <Link href="/talent" data-aos="fade-in">Talent</Link>
+                        <Link href="/premium" data-aos="fade-in" >Premium</Link>
+                        <Link href="/categories" data-aos="fade-in" >Make Request</Link>
+                        <Link href="/premium" data-aos="fade-in" >Logout</Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    {% comment %} MAIN BODY {% endcomment %}
+    {% block content%}
+    {% endblock %}
+    {% comment %} END BODY {% endcomment %}
+
+    {% comment %} did you know {% endcomment %}
+    <section class='little'>
+        <div class='diduknow'>
+            <Image src="{% static 'images/didu.svg' %}" width="300px" alt="Plus" priority class="imageplus" />
+            <p class='elite'>If you search on the web/internet for “ <span>a Mechanic, Interior Designer, Catering services,
+Plumber, Electrician and many more near me,</span>” you would get hundreds if not thousands of
+results, including dozens of local businesses who allege to be the best. You do not have time to
+vet dozens of professional service providers or businesses.</p><p> Well, searching through such results
+is a thing of the past. You just need someone you can trust, to point you in the right direction;
+period! Rely on Mr.KIM’s national network of vetted, trusted, experienced and reliable local
+professionals service providers for all your project’s service needs in your area. Mr. Kim is here
+to help. You Name it! We do it!</p>
+            </div>
+            </section>
+    {% comment %} subscription {% endcomment %}
+    <section class='newsletter'>
+    <div class='newsletters'>
+        <h1>Deals, Inspiration, Expert Tips and Trends</h1>
+        <p>SignUp for emails to learn more about our special Offers, promotions, Inspiration, Tips, Trends and more...</p>
+      <input type='text' placeholder='Full Name'/>
+      <input type='email' placeholder='Email Address'/>
+      <p class='papa'>By clicking the button below, I agree to receive periodic deals, inspirations, expert tips, trends, and many more via email from Mr. KIM at the email address I have provided on my own volition. I authorize Mr.KIM to send such messages using automated means or otherwise. I understand that my consent to receive communications in this way is not required as a condition to use Mr.KIM platform. I understand that I may opt-out of receiving emails at any time by clicking Unsubscribe. I have read and agree to the Privacy Policy and Terms  and conditions. I agree that electronic receipt generated from clicking this button shall constitute my electronic signature for purposes of this agreement.</p>
+      <button>SUBSCRIBE</button>
+    </div>
+    </section>
+        
+    {% comment %} download app {% endcomment %}
+    <div class="barmain">
+        <section class='barbottom'>
+            <div class="bottombar">
+                <h4>Download App</h4>
+                <p>Download Mr. Kim App for an unlimited number of Job Opportunities</p>
+                <div>
+                    <Image src="{% static 'images/google-store.png' %}" width="183px" alt="Plus" priority class="storeicons" />
+                    <Image src="{% static 'images/apple-store.png' %}" width="183px" alt="Plus" priority class="storeicons" />
+               </div>
+            </div>
+        </section>
+     </div>
+    {% comment %} footer {% endcomment %}
+    <section class='mainafoot'>
+        <div class='mainfotter'>
+          <div class='spotsone'>
+            <h4>Mr.KIM ... You Name It! We Do It!</h4>
+            <ul>
+              <li>
+                <Link href="/about"><p>About Us</p></Link>
+              </li>
+              <li>
+                <Link href="/whoweare"><p>Who We Are</p></Link>
+              </li>
+              <li>
+                <Link href="/corevalues"><p>Our Core Values</p></Link>
+              </li>
+              <li>
+                <Link href="/corporatereposnsibility"><p>Corporate Responsibility</p></Link>
+              </li>
+                 
+            </ul>
+          </div>
+          <div class='spotstwo'>
+            <h4>Customers</h4>
+            <ul>
+              <li>
+                <Link href="/howitworks"><p>How It Works</p></Link>
+              </li>
+              <li>
+                <Link href="/getapp"><p>Get The App</p></Link>
+              </li>
+              <li>
+                <Link href="/whykim"><p>Why choose Mr.KIM</p></Link>
+              </li>
+            </ul>
+          </div>
+          <div class='spotsthree'>
+            <h4>Resources</h4>
+            <ul>
+              <li>
+                <Link href="/financing"><p>Financing My Project</p></Link>
+              </li>
+              <li>
+                <Link href="/solution"><p>Solution Center & Expert Tips</p></Link>
+              </li>
+             
+              <li>
+                <Link href="/signup"><p>Sign Up As Pro</p></Link>
+              </li>
+              <li>
+                <Link href="/legal"><p>Legal</p></Link>
+              </li>
+              <li>
+                <Link href="/safety"><p>Safety</p></Link>
+              </li>
+
+              
+              <li>
+                <Link href="/faq"><p>FAQs</p></Link>
+              </li>
+            </ul>
+          </div>
+          <div class='spotsfour'>
+            <h4>Support</h4>
+            <ul>
+              <li>
+                <Link href="/help"><p>Help</p></Link>
+              </li>
+              
+              <li>
+                <Link href="/contacts"><p>Contact Us</p></Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    <section class="main-footer">
+            <div class="footer">
+                <p><small>Copyright © <span><script>document.write( new Date().getFullYear() );</script></span> Mr. Kim</small></p>
+                <div class="manure">
+                    
+                </div>
+                <div class="socials">
+                    <Image src="{% static 'images/facebook.svg' %}" width="30px" alt="facebook" class="facebook" priority/>
+                    <Image src="{% static 'images/linkedin.svg' %}" width="30px" alt="linkedin" class="linkedin" priority/>
+                    <Image src="{% static 'images/instagram.svg' %}" width="30px" alt="instagram" class="instagram" priority/>
+                </div>
+            </div>
+        </section>
+  </body>
+</html>

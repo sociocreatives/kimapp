@@ -1,45 +1,31 @@
-
-<!DOCTYPE html>
+{% extends 'base.html'%}
 {% load static %}
-<html lang="en">
-  <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-     <div class="navbar">
-            <div class="navbar-content">
-                <div class="navbar-left">
-                   <Link href="/">
-                        <Image src="{% static 'images/mrkim-logo.svg' %}" width="160px" alt="mr. kim logo" priority class="imagelogo"/>
-                    </Link>
-                   
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+{% block content %}
+    <section class='outer'>
+        <section class="hero-section" >
+            <div class="hero-content">
+                <div class="hero-left">
+                <div class='location_piece'>
+                <Image src="{% static 'images/SVG/location.svg' %}" width="30px" alt="location" priority class="location" />
                     
-                   
-                    <div class="plus">
-                        <Link href="/categories">Get Service <Image src="{% static 'images/plus2.svg' %}" width="10px" alt="Plus" priority class="imageplus" /></Link>
-                       </div>
+                </div> 
+                    <h1 class="hero-title">Get the right local pro in your area for any project.</h1>
+                    <div class='heroinput'>
+                    <input type="text" placeholder='Search by Category'/>
+                        <button >Search</button>
+                    </div>
+                        <p>We have the best SKILLS and custom services for your PROJECT <span>Go Premium</span> </p>
+                </div>
+                <div class="hero-right">
                     
-                </div>
-                <div class="navbar-right">
-                       <div class="onsign">
-                                <Link href="/">Home</Link>
-                                <Link href="/jobs">Jobs</Link>
-                                <Link href="/categories">Categories</Link>
-                                <Link href="/talent">Talent</Link>
-                                 <Link href="/premium">Premium</Link>        
-                                <SignInButton/>
-                            </div>
-                </div>
-               <div class="mobilemenu">
-        
                 </div>
             </div>
-        </div>
-  </body>
-</html>
+        </section>
+    </section>
+{% endblock %}
