@@ -21,6 +21,14 @@ class Faqs(models.Model):
     def __str__(self):
         return self.title
 
+class Tvets(models.Model):
+    name= models.CharField(max_length=150)
+    class Meta:
+        verbose_name_plural = "Tvets"
+    
+    def __str__(self):
+        return self.name
+
 class ExpertTips(models.Model):
     author = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
@@ -56,3 +64,20 @@ class MajorCategory(models.Model):
     
     def __str__(self):
         return self.name
+
+class Profile(models.Model):
+    current_user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
+    profile_photo = models.ImageField(null=True, blank=True, upload_to='images/userprofiles')
+    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.CASCADE)
+    tvets = models.ForeignKey(Tvets, null=True, blank=True, on_delete=models.CASCADE)
+    location= models.CharField(max_length=50)
+    job_title= models.CharField(max_length=50)
+    bio = models.TextField(null=True)
+    date_of_birth = models.DateField()
+
+
+    class Meta:
+        verbose_name_plural = "User Profile"
+    
+    def __str__(self):
+        return str(self.current_user)

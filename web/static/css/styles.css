@@ -8,6 +8,9 @@
   font-family: 'DM Sans', sans-serif; 
 }
 
+.aboutimage{
+    min-height: 400px;
+}
 /* HERO SECTION */
 .hero-section{
   max-width: 90%;

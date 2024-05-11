@@ -17,7 +17,7 @@
      <div class="navbar">
             <div class="navbar-content">
                 <div class="navbar-left">
-                   <Link href="/">
+                   <Link href="{% url 'home' %}">
                         <Image src="{% static 'images/mrkim-logo.svg' %}" width="160px" alt="mr. kim logo" priority class="imagelogo"/>
                     </Link>
                    
@@ -35,7 +35,12 @@
                                 <Link href="/categories">Categories</Link>
                                 <Link href="/talent">Talent</Link>
                                  <Link href="/premium">Premium</Link>   
-                                 <p id="location"></p>     
+                                {% if user.is_authenticated %}
+                                 <Link href="/premium" >Logout</Link>
+                                 {{user.first_name}}
+                                 {% else %}   
+                                 <Link href="/premium" >Login</Link>
+                                 {% endif %}
                                 <SignInButton/>
                             </div>
                 </div>
@@ -45,21 +50,18 @@
         <Image src="/assets/images/menu.svg" width="30px" alt="mobile menu" class="menusa"/>
         </div>
 
-        <div class="navbar-mobile">
-              <div class="unloged">
-                <div class="welcome">
-                    <h5>Welcome</h5>
-                    </div>
-                        <Link href="/" data-aos="fade-in" >Home</Link>
-                        <Link href="/jobs" data-aos="fade-in" >Jobs</Link>
-                        <Link href="/categories" data-aos="fade-in" >Categories</Link>
-                        <Link href="/profile" data-aos="fade-in" >Profile</Link>
-                        <Link href="/talent" data-aos="fade-in">Talent</Link>
-                        <Link href="/premium" data-aos="fade-in" >Premium</Link>
-                        <Link href="/categories" data-aos="fade-in" >Make Request</Link>
-                        <Link href="/premium" data-aos="fade-in" >Logout</Link>
-                    </div>
-                </div>
+        {% comment %} <div class="navbar-mobile">
+            <div class="unloged">
+                <Link href="/" data-aos="fade-in" >Home</Link>
+                <Link href="/jobs" data-aos="fade-in" >Jobs</Link>
+                <Link href="/categories" data-aos="fade-in" >Categories</Link>
+                <Link href="/profile" data-aos="fade-in" >Profile</Link>
+                <Link href="/talent" data-aos="fade-in">Talent</Link>
+                <Link href="/premium" data-aos="fade-in" >Premium</Link>
+                <Link href="/categories" data-aos="fade-in" >Make Request</Link>
+                <Link href="/premium" data-aos="fade-in" >Logout</Link>
+            </div>
+        </div> {% endcomment %}
             </div>
         </div>
         </div>
@@ -117,7 +119,7 @@ to help. You Name it! We do it!</p>
             <h4>Mr.KIM ... You Name It! We Do It!</h4>
             <ul>
               <li>
-                <Link href="/about"><p>About Us</p></Link>
+                <Link href="{% url 'about' %}"><p>About Us</p></Link>
               </li>
               <li>
                 <Link href="/whoweare"><p>Who We Are</p></Link>
