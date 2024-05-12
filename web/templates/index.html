@@ -17,8 +17,11 @@
                 </div> 
                     <h1 class="hero-title">Get the right local pro in your area for any project.</h1>
                     <div class='heroinput'>
-                    <input type="text" placeholder='Search by Category'/>
-                        <button >Search</button>
+                        <form class='heroinput' method="POST" action="{% url 'search_results' %}">
+                            {% csrf_token %}
+                            <input type="text" placeholder='Search by Category' name="searched"/>
+                            <button >Search</button>
+                        </form>
                     </div>
                         <p>We have the best SKILLS and custom services for your PROJECT <span>Go Premium</span> </p>
                 </div>

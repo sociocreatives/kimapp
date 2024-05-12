@@ -9,8 +9,8 @@
 {% block content %}
 
 <div>
-            <div class="aboutimage" style="background-image: url("{% static 'images/about-header.jpg' %}"); background-position: center ">
-
+            <div class="aboutimage">
+                <img src="{% static 'images/about-header.jpeg' %}" width="100%" style="margin-top: 60px;"/>
             </div>
             <div class="category-section">
                 <div class="category-content" data-aos="fade-up">
@@ -21,7 +21,7 @@
                       </div>
                     </div>
                     <div className="category-below">
-                        <p>Looking for Open Job Opportunities? <span>Find Jobs </span></p>
+                        <p>Looking for Open Job Opportunities? <span><a href="{% url 'about' %}">Find Jobs</a> </span></p>
                     </div>
                     
                 </div> 
@@ -38,7 +38,7 @@
             </section>
             <div class="missions">
                 <div class="mission-image">
-                    <Image src="{% static 'images/howdiduknow.svg' %}" width={200} height={200} alt="Plus" priority class="imageplus" />
+                    <Image src="{% static 'images/howdiduknow.svg' %}" width="200px" alt="Plus" priority class="imageplus" />
                 </div>
                 <div class="mission-contentt">
                     <h3>How Can Mr.KIM Help?</h3>
@@ -47,7 +47,9 @@
             </div>
             <h1 class="who-serve">Who We Serve</h1>
             <section class="whoweserve">
-                <div class="righta" ></div>
+                <div class="righta" style="background-image: url({% static 'images/customers.jpeg' %}); background-position: center; background-size: cover; " >
+                    
+                </div>
                 <div class="lefta">
                     <div>
                         <h1>Customers</h1>

@@ -8,9 +8,9 @@
   font-family: 'DM Sans', sans-serif; 
 }
 
-.aboutimage{
+/* .aboutimage{
     min-height: 400px;
-}
+} */
 /* HERO SECTION */
 .hero-section{
   max-width: 90%;
@@ -175,6 +175,7 @@ input{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -3162,6 +3163,7 @@ label {
   border-radius: 3rem;
   font-weight: 300;
   font-size: .9rem;
+  border: 1px solid lightgray;
 }
 
 .heroinput button{
@@ -4086,11 +4088,14 @@ label {
 .lefta p{
   font-weight: 300;
   font-size: 1.2rem;
+  object-fit: cover;
 }
 
 .righta{
   background-color: #d0e6d3;
+  background-image: url("{% static 'images/customers.jpeg' %}");
   height: 300px;
+  object-fit: cover;
 }
 
 .leftatwo{

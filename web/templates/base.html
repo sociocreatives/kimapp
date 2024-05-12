@@ -17,31 +17,30 @@
      <div class="navbar">
             <div class="navbar-content">
                 <div class="navbar-left">
-                   <Link href="{% url 'home' %}">
+                   <a href="{% url 'home' %}">
                         <Image src="{% static 'images/mrkim-logo.svg' %}" width="160px" alt="mr. kim logo" priority class="imagelogo"/>
-                    </Link>
+                    </a>
                    
                     
                    
                     <div class="plus">
-                        <Link href="/categories">Get Service <Image src="{% static 'images/plus2.svg' %}" width="10px" alt="Plus" priority class="imageplus" /></Link>
+                        <a href="/categories">Get Service <Image src="{% static 'images/plus2.svg' %}" width="10px" alt="Plus" priority class="imageplus" /></a>
                        </div>
                     
                 </div>
                 <div class="navbar-right">
                        <div class="onsign">
-                                <Link href="/">Home</Link>
-                                <Link href="/jobs">Jobs</Link>
-                                <Link href="/categories">Categories</Link>
-                                <Link href="/talent">Talent</Link>
-                                 <Link href="/premium">Premium</Link>   
+                                <a href="/">Home</a>
+                                <a href="/jobs">Jobs</a>
+                                <a href="/categories">Categories</a>
+                                <a href="/talent">Talent</a>
+                                <a href="/premium">Premium</a>   
                                 {% if user.is_authenticated %}
-                                 <Link href="/premium" >Logout</Link>
-                                 {{user.first_name}}
-                                 {% else %}   
-                                 <Link href="/premium" >Login</Link>
-                                 {% endif %}
-                                <SignInButton/>
+                                <a href="" >Logout</a>
+                                {{user.first_name}}
+                                {% else %}   
+                                <a href="/premium" >Login</a>
+                                {% endif %}
                             </div>
                 </div>
                <div class="mobilemenu">
@@ -62,6 +61,7 @@
                 <Link href="/premium" data-aos="fade-in" >Logout</Link>
             </div>
         </div> {% endcomment %}
+
             </div>
         </div>
         </div>
@@ -119,7 +119,7 @@ to help. You Name it! We do it!</p>
             <h4>Mr.KIM ... You Name It! We Do It!</h4>
             <ul>
               <li>
-                <Link href="{% url 'about' %}"><p>About Us</p></Link>
+                <a href="{% url 'about' %}"><p>About Us</p></a>
               </li>
               <li>
                 <Link href="/whoweare"><p>Who We Are</p></Link>
