@@ -45,7 +45,7 @@
           <div class="category-typesone">
             <section class="scrollviews">
                 {% for obj in categories %}
-                <div class="ayiako" data-aos="fade-up"><Link href="/categories/automobile"><div class='cats' data-aos="zoom-in" style="background-image: url({{ obj.image.url }}); background-size: cover; background-position: center">
+                <div data-aos="fade-up"><Link href="/categories/automobile"><div class='cats' data-aos="zoom-in" style="background-image: url({{ obj.image.url }}); background-size: cover; background-position: center">
                     <p class='cat-text'>{{ obj.name }} <span>50+</span></p></div></Link>
                 </div>
                 {% endfor %}
