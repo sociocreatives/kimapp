@@ -4093,7 +4093,6 @@ label {
 
 .righta{
   background-color: #d0e6d3;
-  background-image: url("{% static 'images/customers.jpeg' %}");
   height: 300px;
   object-fit: cover;
 }
