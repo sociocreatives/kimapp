@@ -1012,6 +1012,11 @@ input{
     padding: 2rem 0rem;
   }
 
+  .category-typesone-legal{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   @media screen and (max-width: 960px) {
     .faq{
       max-width: 90%;

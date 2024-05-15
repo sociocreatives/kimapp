@@ -81,3 +81,24 @@ class Profile(models.Model):
     
     def __str__(self):
         return str(self.current_user)
+
+class SubCategory(models.Model):
+    sub_category= models.CharField(max_length=50)
+    main_category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name_plural = "SubCategories"
+    
+    def __str__(self):
+        return self.sub_category
+    
+class WhyChoose(models.Model):
+    image = models.ImageField(null=True, blank=True, upload_to='images/category/')
+    title= models.CharField(max_length=50)
+    description = models.TextField(null=True)
+
+    class Meta:
+        verbose_name_plural = "Why Choose Us"
+    
+    def __str__(self):
+        return self.title

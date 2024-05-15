@@ -2,7 +2,7 @@ from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Category
-from .models import Profile
+from .models import Profile, Legal, WhyChoose
 from .models import Tvets
 
 def home(request):
@@ -30,3 +30,16 @@ def profile(request):
 def logout_view(request):
     logout(request)
     return redirect('home')
+
+def legal(request):
+    legal = Legal.objects.all()
+    return render(request, 'legal.html', {'legal': legal})
+
+def why_choose_us(request):
+    whyus = WhyChoose.objects.all()
+    return render(request, 'whychoose.html', {'whyus': whyus})
+
+def how_it_works(request):
+    whyus = WhyChoose.objects.all()
+    return render(request, 'how_it_works.html', {'whyus': whyus})
+
