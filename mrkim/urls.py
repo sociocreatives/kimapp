@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('web.urls')),
     path('uganda/', include('uganda.urls')),
-    path('mpesa/', include(mpesa_urls)),
+    path('mpesa/', include('mpesa_urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
