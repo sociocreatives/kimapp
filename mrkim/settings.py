@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'import_export',
     'ckeditor',
     'tanzania',
-    'uganda',
     'rwanda',
     'mpesa',
 ]
