@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'web',
     'import_export',
     'ckeditor',
+    'tanzania',
+    'uganda',
+    'rwanda',
+    'mpesa',
 ]
 
 MIDDLEWARE = [
