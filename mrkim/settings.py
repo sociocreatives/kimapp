@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'ckeditor',
     'tanzania',
     'rwanda',
-    'mpesa',
 ]
 
 MIDDLEWARE = [
